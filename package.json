@@ -1,0 +1,25 @@
+{
+  "name": "express-api",
+  "version": "1.0.0",
+  "description": "API-REST COM EXPRESS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo hello world"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlfredoDevloper/API-REST-para-gerenciamento-de-dados.git"
+  },
+  "keywords": [
+    "api",
+    "node",
+    "express",
+    "javascript"
+  ],
+  "author": "Alfredo Francisco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlfredoDevloper/API-REST-para-gerenciamento-de-dados/issues"
+  },
+  "homepage": "https://github.com/AlfredoDevloper/API-REST-para-gerenciamento-de-dados#readme"
+}
