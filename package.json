@@ -4,7 +4,8 @@
   "description": "API-REST COM EXPRESS",
   "main": "index.js",
   "scripts": {
-    "test": "echo hello world"
+    "test": "echo hello world",
+    "dev:start": "nodemon ./src/index.mjs"
   },
   "repository": {
     "type": "git",
