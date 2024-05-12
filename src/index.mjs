@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { request } from 'express';
 
 const app = express();
 
@@ -102,6 +102,49 @@ app.put("/api/users/:id", (request, response) => {
 
     clients[findUserIndex] = { id: parsedId, ...body };
     return response.sendStatus(200);
+});
+
+/**Method PATCH */
+
+app.patch("/api/users/:id", (request, response) => {
+
+    const { body, params: { id }, } = request;
+
+    const parsedId = parseInt(id);
+    if (isNaN(parsedId)) return response.sendStatus(400);
+
+    const findUserIndex = clients.findIndex(
+        (user) => user.id === parsedId
+    );
+
+    if (findUserIndex === -1)
+        return response.sendStatus(404);
+
+    clients[findUserIndex] = { ...clients[findUserIndex], ...body };
+    return response.sendStatus(200);
+
+});
+
+
+/**DELETE method */
+
+app.delete("/api/users/:id", (request, response) => {
+
+    const { body, params: { id }, } = request;
+
+    const parsedId = parseInt(id);
+    if (isNaN(parsedId)) return response.sendStatus(400);
+
+    const findUserIndex = clients.findIndex(
+        (user) => user.id === parsedId
+    );
+
+    if (findUserIndex === -1)
+        return response.sendStatus(404);
+
+    clients.splice(findUserIndex);
+    return response.sendStatus(200);
+
 });
 
 
