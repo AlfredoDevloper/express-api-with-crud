@@ -128,6 +128,7 @@ app.patch("/api/users/:id", (request, response) => {
 
 /**DELETE method */
 
+
 app.delete("/api/users/:id", (request, response) => {
 
     const { body, params: { id }, } = request;
